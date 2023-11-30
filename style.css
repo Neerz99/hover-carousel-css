@@ -1,0 +1,58 @@
+.all-cards {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+span {
+    display: none;
+}
+
+.card-one,
+.card-two,
+.card-three,
+.card-four {
+    background: url('/img/montreal-skyline.png');
+    /* background-size: 55vw 50vh; */
+    background-size: cover;
+    height: 50vh;
+    width: 15vw;
+    margin: 12px;
+    border-radius: 16px;
+    box-shadow: 0 0 10px #00000080;
+    transition: 0.75s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.card-one:hover span,
+.card-two:hover span,
+.card-three:hover span,
+.card-four:hover span {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+    color: white;
+    text-shadow: black 0 0 10px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.card-one:hover,
+.card-two:hover,
+.card-three:hover,
+.card-four:hover {
+    width: 80vw;
+    transition: 0.75s ease-in-out;
+}
